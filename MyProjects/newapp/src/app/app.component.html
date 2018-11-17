@@ -1,3 +1,4 @@
+<!--String interpolation-->
 {{titre + " Rawaa"}}
 <hr>
 {{nombre}}
@@ -7,5 +8,18 @@
  {{obj.cle}}
  <hr>
  {{sqr(5)}}
+<hr>
+<!--property binding le date doit etre definit dans le component comme une variable de type string égale date-->
+<input [type]="date"/>
 
+<hr>
+bonjour {{nom}}
 
+<hr>
+
+<!--<span> est un conteneur générique en ligne (inline) pour les contenus phrasés. 
+    Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin
+     de les mettre en forme (grâce aux attributs class ou id et aux règles CSS)-->
+
+     <!--innerHTML est utilise pour modifier la valeur d'un text-->
+<p><span [innerHTML]="nom">hhh</span></p>
