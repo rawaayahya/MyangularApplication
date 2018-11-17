@@ -3,14 +3,23 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl:'app.component.html',
-  styles: [`h1{
-    color: red;
-  }`]
+  styleUrls: [`app.component.css`]
 })
 export class AppComponent {
-  nom:string;
+  titre:string='mon titre';
+  nombre:number=10;
+  bool:boolean=true;
+
+  obj:{}={
+
+    cle:'ma cle'
+  }
+    nom:string;
   constructor() {
     this.nom = `Angular`;
   }
+  sqr(a:number):number{
 
+    return(a *a );
+  }
 }
