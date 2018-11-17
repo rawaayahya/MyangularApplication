@@ -20,6 +20,7 @@ export class AppComponent {
     cle:'ma cle'
   }
     nom:string;
+    content:string="merde";
   constructor() {
     this.nom = `<script> Méchant script </script>`;
   }

@@ -43,3 +43,10 @@ lier l'event input par une expression qui change la valeur du nom par la valeur 
 <input [value]="nom" (input)="nom=$event.target.value">
 <hr>
 {{nom}}
+
+<!--Double data binding-->
+<!--pour faire fonctionner le double data binding on  a besoin d'importer le module FormsModule-->
+<hr>
+<input type="text" [(ngModel)]="content">
+<hr>
+{{content}}
