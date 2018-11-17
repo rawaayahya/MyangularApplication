@@ -14,7 +14,7 @@ export class AppComponent {
   // de tous les champs dans le formulaire ;on peut lier la property disable avec un attribut dans le component
   // qui vérifie que tout les eleemnts dans le formulaire sont remplis pour se mettre à false
   date:string="number"; 
-
+  color:string="red";
   obj:{}={
 
     cle:'ma cle'
@@ -26,5 +26,13 @@ export class AppComponent {
   sqr(a:number):number{
 
     return(a *a );
+  }
+  iclick(event:Event):void{
+
+    console.log(event);
+  }
+  changeColor(color:string):void{
+
+    this.color=color;
   }
 }

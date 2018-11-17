@@ -1,5 +1,5 @@
 <!--String interpolation-->
-{{titre + " Rawaa"}}
+<!--{{titre + " Rawaa"}}
 <hr>
 {{nombre}}
 <hr>
@@ -9,17 +9,37 @@
  <hr>
  {{sqr(5)}}
 <hr>
-<!--property binding le date doit etre definit dans le component comme une variable de type string égale date-->
-<input [type]="date"/>
+property binding le date doit etre definit dans le component comme une variable de type string égale date-->
+<!--<input [type]="date"/>
 
 <hr>
 bonjour {{nom}}
 
 <hr>
 
-<!--<span> est un conteneur générique en ligne (inline) pour les contenus phrasés. 
+<span> est un conteneur générique en ligne (inline) pour les contenus phrasés. 
     Il ne représente rien de particulier. Il peut être utilisé pour grouper des éléments afin
      de les mettre en forme (grâce aux attributs class ou id et aux règles CSS)-->
 
      <!--innerHTML est utilise pour modifier la valeur d'un text-->
-<p><span [innerHTML]="nom">hhh</span></p>
+<!--<p><span [innerHTML]="nom">hhh</span></p>
+-->
+<br>
+<!-- crée un saut de ligne (un retour chariot) dans le texte-->
+<br>
+<br>
+<br>
+<!--$event est un objet native -->
+<div style="width:500px; height:200px;"
+[style.backgroundColor]="color"
+(click)="changeColor('green')"
+(mouseenter)="changeColor('red')"
+(mouseleave)="changeColor('blue')"></div>
+<!-- lier le property value de l'element html input par la variable nom donc la valeur de input prend toujour 
+la valeur du nom 
+
+lier l'event input par une expression qui change la valeur du nom par la valeur mis en input-->
+<hr>
+<input [value]="nom" (input)="nom=$event.target.value">
+<hr>
+{{nom}}
