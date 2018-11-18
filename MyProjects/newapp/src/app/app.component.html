@@ -54,10 +54,27 @@ lier l'event input par une expression qui change la valeur du nom par la valeur 
 <p *ngIf="display">bonjour la vie </p>
 -->
 <!--nng Style-->
-<input type="text" [(ngModel)]="color">
+<!--<input type="text" [(ngModel)]="color">
 <div [ngStyle]="{
     width:'200px',
     height:'200px',
     backgroundColor:color
 
+}"></div> -->
+
+
+<!-- ngClass on definit des class css pour l'utiliser dans notre div on peut aussi gerer l'affichage de ces classe
+en definissant une operation dans la logique du component qui definit quel classe on utilise-->
+
+<input type="text" [(ngModel)]="content" />
+<hr>
+<!--<div [ngClass]="{
+    bluesquare:getStatus(),
+    redsquare:false
+    
+}"></div>-->
+<div [ngClass]="{
+    bluesquare:content === 'blue',
+    redsquare:content === 'red'
+    
 }"></div>

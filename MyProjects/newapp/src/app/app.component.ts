@@ -21,7 +21,7 @@ export class AppComponent {
     cle:'ma cle'
   }
     nom:string;
-    content:string="merde";
+    content:string="";
   constructor() {
     this.nom = `<script> Méchant script </script>`;
   }
@@ -36,5 +36,14 @@ export class AppComponent {
   changeColor(color:string):void{
 
     this.color=color;
+  }
+
+  getStatus():boolean{
+    if(this.content!=null && this.content!=""){
+      return true;
+    }else
+    {
+      return false;
+    }
   }
 }
