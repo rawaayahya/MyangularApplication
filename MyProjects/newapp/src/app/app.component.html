@@ -66,15 +66,23 @@ lier l'event input par une expression qui change la valeur du nom par la valeur 
 <!-- ngClass on definit des class css pour l'utiliser dans notre div on peut aussi gerer l'affichage de ces classe
 en definissant une operation dans la logique du component qui definit quel classe on utilise-->
 
-<input type="text" [(ngModel)]="content" />
+<!--<input type="text" [(ngModel)]="content" />-->
 <hr>
 <!--<div [ngClass]="{
     bluesquare:getStatus(),
     redsquare:false
     
 }"></div>-->
-<div [ngClass]="{
+<!--<div [ngClass]="{
     bluesquare:content === 'blue',
     redsquare:content === 'red'
     
-}"></div>
+}"></div>-->
+<!--ngFor pour iterer sur une liste d'objet  ,il va iterer sur le tableau users et mettre l'element d'une iteration
+dans la variable user , angular 2 va creer uene variable index qu'on peut l'utiliser pour savoir l'indexx de chaque 
+element dans la liste içi on va mettre la valeur de index dans la variable i
+users est un arry definit dans le component-->
+<ul>
+
+    <li *ngFor="let user of users; let i=index;">{{user.nom}} | {{i}}</li>
+</ul>

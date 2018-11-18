@@ -10,7 +10,8 @@ export class AppComponent {
   nombre:number=10;
   bool:boolean=true;
   display:boolean=false;
-  //property binding nous permet une souplesse dans la definition des elements html
+
+  users:Array<{nom}>=[];  //property binding nous permet une souplesse dans la definition des elements html
   // par exemple si vous voulez désactiver le click sur un boutton jusqu'à le remplissage 
   // de tous les champs dans le formulaire ;on peut lier la property disable avec un attribut dans le component
   // qui vérifie que tout les eleemnts dans le formulaire sont remplis pour se mettre à false
@@ -24,6 +25,9 @@ export class AppComponent {
     content:string="";
   constructor() {
     this.nom = `<script> Méchant script </script>`;
+    this.users.push({nom: "Rawaa"});
+    this.users.push({nom: "Mouhab"});
+    this.users.push({nom: "Aicha"});
   }
   sqr(a:number):number{
 
