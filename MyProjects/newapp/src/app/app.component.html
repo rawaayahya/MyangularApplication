@@ -24,29 +24,27 @@ bonjour {{nom}}
      <!--innerHTML est utilise pour modifier la valeur d'un text-->
 <!--<p><span [innerHTML]="nom">hhh</span></p>
 -->
-<br>
+
 <!-- crée un saut de ligne (un retour chariot) dans le texte-->
-<br>
-<br>
-<br>
+
 <!--$event est un objet native -->
-<div style="width:500px; height:200px;"
+<!--<div style="width:500px; height:200px;"
 [style.backgroundColor]="color"
 (click)="changeColor('green')"
 (mouseenter)="changeColor('red')"
-(mouseleave)="changeColor('blue')"></div>
+(mouseleave)="changeColor('blue')"></div>-->
 <!-- lier le property value de l'element html input par la variable nom donc la valeur de input prend toujour 
 la valeur du nom 
 
 lier l'event input par une expression qui change la valeur du nom par la valeur mis en input-->
-<hr>
+<!--<hr>
 <input [value]="nom" (input)="nom=$event.target.value">
 <hr>
-{{nom}}
+{{nom}}-->
 
 <!--Double data binding-->
 <!--pour faire fonctionner le double data binding on  a besoin d'importer le module FormsModule-->
-<hr>
+<!--<hr>
 <input type="text" [(ngModel)]="content">
 <hr>
 {{content}}
@@ -54,3 +52,12 @@ lier l'event input par une expression qui change la valeur du nom par la valeur 
 <hr>
 <button (click)="display=!display"></button>
 <p *ngIf="display">bonjour la vie </p>
+-->
+<!--nng Style-->
+<input type="text" [(ngModel)]="color">
+<div [ngStyle]="{
+    width:'200px',
+    height:'200px',
+    backgroundColor:color
+
+}"></div>
