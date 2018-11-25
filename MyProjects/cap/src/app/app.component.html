@@ -1,0 +1,37 @@
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-6 col-sm-3">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">fruit</span>
+            </div>
+            <!--on definit une reference local #f de l'opbjet htm input suivant-->
+            <!--au lieu de passer la reference on peut acceder directement avec le Viw child-->
+            <input type="text" class="form-control"  aria-describedby="inputGroup-sizing-default" #f>
+          </div>
+    </div>
+    <div class="col-xs-6 col-sm-3"  >
+      <!--on passe la refrence f à la methode addFruit-->
+        <button class="button"  (click)="addFruit();f.value=''">Ajouter</button>
+         
+        </div>
+   
+  </div>
+  <br>
+  
+  <div class="row">
+      <ul class="list-group">
+        <!--on ajoute la property input [AliasF] POUR INDIQUER à angular qu'on va passer la valeur de f à la variable defni
+        dans le component enfat app-item defin par alis @Input('AliasF')-->
+        <!-- on ecoute l'event envoyé par le component enfant app-item (deleteF)="l'action àfaire suite à l'ecoute d'un event"
+        on appelle l'action deleteFruit defini dans le compnent app.component-->
+          <app-item *ngFor="let f of fruits;let i=index;"  [AliasF]="f" (deleteF)="deleteFruit($event)" #item>
+            <p #p>{{fruits[i]}}</p>
+          </app-item>
+         
+        </ul>
+  </div>
+</div>
+
