@@ -1,0 +1,20 @@
+
+<div class='row'>
+<div class="list-group col-12 ">
+  <a href='#' [appColor]="{text: 'purple',backgroundColor: 'green'}" class="list-group-item list-group-item-action" *ngFor="let cocktail of cocktails" (click)="selectCocktail(cocktail)">{{cocktail.name}}</a>
+</div>
+
+</div>
+<hr>
+<div class='raw'>
+<button class="btn btn-success" (click)="setEnableTrue();">Ajouter un cocktail</button>
+<div >
+<br>
+<table *ngIf="!Enable">
+  <tr><th><label>Name of Cocktail</label> </th> <th> <input type="text" #name ></th> </tr>
+  <tr><th><label>description of Cocktail</label> </th> <th> <input type="text" #desc></th> </tr>
+  <tr><th><label>Image of Cocktail</label> </th> <th> <input type="text" #img></th> </tr>
+
+</table>
+</div>
+</div>
